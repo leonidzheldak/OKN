@@ -1,0 +1,63 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+   int hm;
+   setlocale(LC_ALL, "Russian");
+   cout<<"dd: ";
+   int dd;
+   cin>>dd;
+   if(dd<1 || dd>31)
+       cout<<"Error";
+   else
+   {
+       cout<<"mm: ";
+       int mm;
+       cin>>mm;
+       if(mm<1 || mm>12)
+           cout<<"Error";
+       else
+       {
+           switch(mm)
+           {
+               case 1:
+                   hm=dd;
+                   break;
+               case 2:
+                   hm=31+dd;
+                   break;
+               case 3:
+                   hm=31+28+dd;
+                   break;
+               case 4:
+                   hm=31+28+31+dd;
+                   break;
+               case 5:
+                   hm=31+28+31+30+dd;
+                   break;
+               case 6:
+                   hm=31+28+31+30+31+dd;
+                   break;
+               case 7:
+                   hm=31+28+31+30+31+30+dd;
+                   break;
+               case 8:
+                   hm=31+28+31+30+31+30+31+dd;
+                   break;
+               case 9:
+                   hm=31+28+31+30+31+30+31+31+dd;
+                   break;
+               case 10:
+                   hm=31+28+31+30+31+30+31+31+30+dd;
+                   break;
+               case 11:
+                   hm=31+28+31+30+31+30+31+31+30+31+dd;
+                   break;
+               case 12:
+                   hm=31+28+31+30+31+30+31+31+30+31+30+dd;
+                   break;
+           }
+           cout<<"До нового года осталось: "<<365-hm;
+       }
+   }
+}
