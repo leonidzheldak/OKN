@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+void print_array(int array[], int n)
+{
+    for(int i=0;i<n;i++)
+        cout<<array[i]<<' ';
+    cout<<endl;
+}
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int a1, d, n;
+    cout<<"Введите 1 элемент прогрессии: ";
+    cin>>a1;
+    cout<<"Введите разность прогрессии: ";
+    cin>>d;
+    cout<<"Введите количество элементов прогрессии: ";
+    cin>>n;
+    int mas[n];
+    mas[0]=a1;
+    for(int i=1;i<n;i++)
+        mas[i]=mas[i-1]+d;
+
+    print_array(mas, n);
+}
